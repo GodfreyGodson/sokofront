@@ -1,0 +1,219 @@
+<!-- <div class="form-container">
+    <form action="" id="signin-form">
+        <ul class="form-items">
+            <li>
+                <h1>Sign In</h1>
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="passwprd" name="password" id="password" />
+            </li>
+            <li>
+                <button type="submit" class="primary">Signin</button>
+            </li>
+            <li>
+                <div>
+                    New User?
+                    <a href="/#/register">Create Your Account</a>
+                </div>
+            </li>
+        </ul>
+
+    </form>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            /* Set a background color */
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #signin-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            /* Set a fixed width or use media queries for responsiveness */
+        }
+
+        .form-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #28a745;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</div> -->
+
+
+
+
+
+
+<div class="form-container">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #signin-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #28a745;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #password {
+            position: relative;
+        }
+
+        #show-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+
+    <form action="" id="signin-form">
+        <ul class="form-items">
+            <li>
+                <h1>Sign In</h1>
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" />
+                <input type="checkbox" id="show-password">
+            </li>
+            <li>
+                <button type="submit" class="primary">Sign In</button>
+            </li>
+            <li>
+                <div>
+                    New User?
+                    <a href="/#/register">Create Your Account</a>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+
+<script>
+    const passwordInput = document.getElementById('password');
+    const showPasswordCheckbox = document.getElementById('show-password');
+
+    showPasswordCheckbox.addEventListener('change', function () {
+        passwordInput.type = this.checked ? 'text' : 'password';
+    });
+</script>
